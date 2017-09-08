@@ -1,0 +1,15 @@
+C:\Proyectos\SQLite\bin\Release\SQLite.exe.config
+C:\Proyectos\SQLite\bin\Release\SQLite.exe
+C:\Proyectos\SQLite\bin\Release\SQLite.pdb
+C:\Proyectos\SQLite\bin\Release\MetroFramework.dll
+C:\Proyectos\SQLite\bin\Release\MetroFramework.Fonts.dll
+C:\Proyectos\SQLite\obj\Release\SQLite.csprojResolveAssemblyReference.cache
+C:\Proyectos\SQLite\obj\Release\SQLite.FrmMenu.resources
+C:\Proyectos\SQLite\obj\Release\SQLite.FrmSQLite.resources
+C:\Proyectos\SQLite\obj\Release\SQLite.Properties.Resources.resources
+C:\Proyectos\SQLite\obj\Release\SQLite.Requisito.resources
+C:\Proyectos\SQLite\obj\Release\SQLite.STPS.resources
+C:\Proyectos\SQLite\obj\Release\SQLite.csproj.GenerateResource.Cache
+C:\Proyectos\SQLite\obj\Release\SQLite.exe
+C:\Proyectos\SQLite\obj\Release\SQLite.pdb
+C:\Proyectos\SQLite\obj\Release\SQLite.USB.resources

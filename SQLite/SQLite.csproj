@@ -84,6 +84,12 @@
     <Compile Include="STPS.Designer.cs">
       <DependentUpon>STPS.cs</DependentUpon>
     </Compile>
+    <Compile Include="USB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="USB.Designer.cs">
+      <DependentUpon>USB.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FrmMenu.resx">
       <DependentUpon>FrmMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -105,6 +111,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="STPS.resx">
       <DependentUpon>STPS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="USB.resx">
+      <DependentUpon>USB.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="packages.config" />

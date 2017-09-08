@@ -32,6 +32,7 @@
             this.tabSTPS = new MetroFramework.Controls.MetroTabControl();
             this.tab5 = new MetroFramework.Controls.MetroTabPage();
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
+            this.btnOK = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gridSTPS)).BeginInit();
             this.tabSTPS.SuspendLayout();
             this.SuspendLayout();
@@ -92,11 +93,22 @@
             this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage2.VerticalScrollbarSize = 10;
             // 
+            // btnOK
+            // 
+            this.btnOK.Location = new System.Drawing.Point(476, 368);
+            this.btnOK.Name = "btnOK";
+            this.btnOK.Size = new System.Drawing.Size(75, 23);
+            this.btnOK.TabIndex = 2;
+            this.btnOK.Text = "OK!";
+            this.btnOK.UseVisualStyleBackColor = true;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
+            // 
             // STPS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(567, 374);
+            this.ClientSize = new System.Drawing.Size(567, 405);
+            this.Controls.Add(this.btnOK);
             this.Controls.Add(this.tabSTPS);
             this.Controls.Add(this.gridSTPS);
             this.Name = "STPS";
@@ -115,5 +127,6 @@
         private MetroFramework.Controls.MetroTabControl tabSTPS;
         private MetroFramework.Controls.MetroTabPage tab5;
         private MetroFramework.Controls.MetroTabPage metroTabPage2;
+        private System.Windows.Forms.Button btnOK;
     }
 }

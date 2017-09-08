@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SQLite;
 using System.Drawing;
 using System.IO;
 using System.Text;
@@ -9,7 +10,6 @@ using System.Windows.Forms;
 using MetroFramework;
 using MetroFramework.Forms;
 using MetroFramework.Controls;
-using System.Data.SQLite;
 
 namespace SQLite
 {
@@ -151,9 +151,9 @@ namespace SQLite
                 SqliteConexion.Open();
                 String sQuery = String.Empty;
 
-                if (tbNombre.Text.Length > 0 
+                if (tbNombre.Text.Length > 0
                     && tbGiro.Text.Length > 0
-                    && tbDireccion.Text.Length > 0 
+                    && tbDireccion.Text.Length > 0
                     && tbDescripcionProceso.Text.Length > 0)
                 {
                     if (bExiste)

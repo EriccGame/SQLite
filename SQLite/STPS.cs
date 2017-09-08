@@ -1,17 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SQLite;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
+using MetroFramework.Forms;
 
 namespace SQLite
 {
-    public partial class STPS : Form
+    public partial class STPS : MetroForm
     {
+        Requisito[] R;
         String NombreEmpresa;
 
         public STPS(String NombreEmpresa)
@@ -34,35 +32,24 @@ namespace SQLite
 
             Int32 iPosY = -125;
             String sEstatus = String.Empty;
-            Requisito R;
+            R = new Requisito[DT.Rows.Count];
 
             for (int i = 0; i < DT.Rows.Count; i++)
             {
-                R = new Requisito
-                {
-                    Location = new Point(0, iPosY += 125),
-                    Name = DT.Rows[i][5].ToString()
-                };
-
-                R.tbRequisito.Text = DT.Rows[i][2].ToString();
-                R.tbObservacion.Text = DT.Rows[i][3].ToString();
-                sEstatus = DT.Rows[i][4].ToString();
-
-                if (sEstatus.Equals("1"))
-                {
-                    R.rbtnCumple.Checked = true;
-                }
-                else if (sEstatus.Equals("2")) 
-                {
-                    R.rbtnNoCumple.Checked = true;
-                }
-                else if (sEstatus.Equals("3"))
-                {
-                    R.rbtnNoAplica.Checked = true;
-                }
-
-                tab5.Controls.Add(R);
+                Add(i, iPosY += 125, DT.Rows[i][5].ToString(), DT.Rows[i][2].ToString(), DT.Rows[i][3].ToString(), DT.Rows[i][4].ToString());
             }
+        }
+
+        private void Add(Int32 iID, Int32 iPosY, String sNombre, String sRequisito, String sObservacion, String sEstatus)
+        {
+            R[iID] = new Requisito();
+            R[iID].Ubicacion = iPosY;
+            R[iID].Name = sNombre;
+            R[iID].Requisitos = sRequisito;
+            R[iID].Observacion = sObservacion;
+            R[iID].RadioButtonCheck(sEstatus);
+
+            tab5.Controls.Add(R[iID]);
         }
 
         private void STPS_FormClosing(object sender, FormClosingEventArgs e)
@@ -74,10 +61,18 @@ namespace SQLite
         {
             if (keyData == Keys.Escape)
             {
-                Application.Exit();
+                if (MessageBox.Show("Exit?", "Salir", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                {
+                    Application.Exit();
+                }
                 return true;
             }
             return base.ProcessCmdKey(ref msg, keyData);
+        }
+
+        private void btnOK_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
